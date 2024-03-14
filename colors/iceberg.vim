@@ -5,7 +5,6 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2024-03-13 23:36-0400
 " License:    MIT
 
 

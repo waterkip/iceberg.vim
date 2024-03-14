@@ -5,7 +5,6 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   {{ modified }}
 " License:    MIT
 
 
