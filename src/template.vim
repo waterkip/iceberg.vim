@@ -21,30 +21,10 @@ let g:colors_name = 'iceberg'
 
 if &background == 'light'
   {{ light_rules }}
-
-  if has('nvim')
-    {{ light_neovim_term_defs }}
-  else
-    {{ light_vim_term_defs }}
-  endif
+  {{ light_vim_term_defs }}
 else
   {{ dark_rules }}
-
-  if has('nvim')
-    {{ dark_neovim_term_defs }}
-  else
-    {{ dark_vim_term_defs }}
-  endif
+  {{ dark_vim_term_defs }}
 endif
 
 {{ links }}
-
-if has('nvim-0.8')
-  {{ neovim_08_links }}
-endif
-
-let g:iceberg_specialkey_ws = get(g:, 'iceberg_specialkey_ws', has('nvim') ? 0 : 1)
-
-if iceberg_specialkey_ws
-  hi! link SpecialKey Whitespace
-endif
