@@ -5,7 +5,6 @@
 "
 " File:       iceberg.vim
 " Maintainer: cocopon <cocopon@me.com>
-" Modified:   2024-03-14 07:58-0400
 " License:    MIT
 
 
@@ -134,26 +133,7 @@ if &background == 'light'
   hi DiagnosticFloatingHint ctermbg=251 ctermfg=237 guibg=#cad0de guifg=#33374c
   hi icebergALAccentRed ctermfg=125 guifg=#cc517a
 
-  if has('nvim')
-    let g:terminal_color_0 = '#dcdfe7'
-    let g:terminal_color_1 = '#cc517a'
-    let g:terminal_color_2 = '#668e3d'
-    let g:terminal_color_3 = '#c57339'
-    let g:terminal_color_4 = '#2d539e'
-    let g:terminal_color_5 = '#7759b4'
-    let g:terminal_color_6 = '#3f83a6'
-    let g:terminal_color_7 = '#33374c'
-    let g:terminal_color_8 = '#8389a3'
-    let g:terminal_color_9 = '#cc3768'
-    let g:terminal_color_10 = '#598030'
-    let g:terminal_color_11 = '#b6662d'
-    let g:terminal_color_12 = '#22478e'
-    let g:terminal_color_13 = '#6845ad'
-    let g:terminal_color_14 = '#327698'
-    let g:terminal_color_15 = '#262a3f'
-  else
-    let g:terminal_ansi_colors = ['#dcdfe7', '#cc517a', '#668e3d', '#c57339', '#2d539e', '#7759b4', '#3f83a6', '#33374c', '#8389a3', '#cc3768', '#598030', '#b6662d', '#22478e', '#6845ad', '#327698', '#262a3f']
-  endif
+  let g:terminal_ansi_colors = ['#dcdfe7', '#cc517a', '#668e3d', '#c57339', '#2d539e', '#7759b4', '#3f83a6', '#33374c', '#8389a3', '#cc3768', '#598030', '#b6662d', '#22478e', '#6845ad', '#327698', '#262a3f']
 else
   hi Normal ctermbg=234 ctermfg=252 guibg=#161821 guifg=#c6c8d1
   hi ColorColumn cterm=NONE ctermbg=235 ctermfg=NONE guibg=#1e2132 guifg=NONE
@@ -268,26 +248,7 @@ else
   hi DiagnosticFloatingHint ctermbg=236 ctermfg=251 guibg=#3d425b guifg=#c6c8d1
   hi icebergALAccentRed ctermfg=203 guifg=#e27878
 
-  if has('nvim')
-    let g:terminal_color_0 = '#1e2132'
-    let g:terminal_color_1 = '#e27878'
-    let g:terminal_color_2 = '#b4be82'
-    let g:terminal_color_3 = '#e2a478'
-    let g:terminal_color_4 = '#84a0c6'
-    let g:terminal_color_5 = '#a093c7'
-    let g:terminal_color_6 = '#89b8c2'
-    let g:terminal_color_7 = '#c6c8d1'
-    let g:terminal_color_8 = '#6b7089'
-    let g:terminal_color_9 = '#e98989'
-    let g:terminal_color_10 = '#c0ca8e'
-    let g:terminal_color_11 = '#e9b189'
-    let g:terminal_color_12 = '#91acd1'
-    let g:terminal_color_13 = '#ada0d3'
-    let g:terminal_color_14 = '#95c4ce'
-    let g:terminal_color_15 = '#d2d4de'
-  else
-    let g:terminal_ansi_colors = ['#1e2132', '#e27878', '#b4be82', '#e2a478', '#84a0c6', '#a093c7', '#89b8c2', '#c6c8d1', '#6b7089', '#e98989', '#c0ca8e', '#e9b189', '#91acd1', '#ada0d3', '#95c4ce', '#d2d4de']
-  endif
+  let g:terminal_ansi_colors = ['#1e2132', '#e27878', '#b4be82', '#e2a478', '#84a0c6', '#a093c7', '#89b8c2', '#c6c8d1', '#6b7089', '#e98989', '#c0ca8e', '#e9b189', '#91acd1', '#ada0d3', '#95c4ce', '#d2d4de']
 endif
 
 hi! link TermCursor Cursor
@@ -448,57 +409,3 @@ hi! link typescriptIdentifier Statement
 hi! link typescriptMessage icebergNormalFg
 hi! link typescriptNull Constant
 hi! link typescriptParens icebergNormalFg
-
-if has('nvim-0.8')
-  hi! link @attribute TSAttribute
-  hi! link @boolean TSBoolean
-  hi! link @character TSCharacter
-  hi! link @comment TSComment
-  hi! link @constructor TSConstructor
-  hi! link @conditional TSConditional
-  hi! link @constant TSConstant
-  hi! link @constant.builtin TSConstBuiltin
-  hi! link @constant.macro TSConstMacro
-  hi! link @error TSError
-  hi! link @exception TSException
-  hi! link @field TSField
-  hi! link @float TSFloat
-  hi! link @function TSFunction
-  hi! link @function.builtin TSFunctionBuiltin
-  hi! link @function.macro TSFunctionMacro
-  hi! link @include TSInclude
-  hi! link @keyword TSKeyword
-  hi! link @keyword.function TSKeywordFunction
-  hi! link @label TSLabel
-  hi! link @method TSMethod
-  hi! link @namespace TSNamespace
-  hi! link @number TSNumber
-  hi! link @operator TSOperator
-  hi! link @parameter TSParameter
-  hi! link @parameter.reference TSParameterReference
-  hi! link @property TSProperty
-  hi! link @punctuation.delimiter TSPunctDelimiter
-  hi! link @punctuation.bracket TSPunctBracket
-  hi! link @punctuation.special TSPunctSpecial
-  hi! link @repeat TSRepeat
-  hi! link @string TSString
-  hi! link @string.regex TSStringRegex
-  hi! link @string.escape TSStringEscape
-  hi! link @tag TSTag
-  hi! link @tag.attribute TSTagAttribute
-  hi! link @tag.delimiter TSTagDelimiter
-  hi! link @text TSText
-  hi! link @text.note Todo
-  hi! link @text.title TSTitle
-  hi! link @text.uri TSURI
-  hi! link @type TSType
-  hi! link @type.builtin TSTypeBuiltin
-  hi! link @variable TSVariable
-  hi! link @variable.builtin TSVariableBuiltin
-endif
-
-let g:iceberg_specialkey_ws = get(g:, 'iceberg_specialkey_ws', has('nvim') ? 0 : 1)
-
-if iceberg_specialkey_ws
-  hi! link SpecialKey Whitespace
-endif
